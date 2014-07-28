@@ -1,0 +1,48 @@
+diff --git a/target/product/full_base.mk b/target/product/full_base.mk
+index cc492ed..49838fa 100644
+--- a/target/product/full_base.mk
++++ b/target/product/full_base.mk
+@@ -24,13 +24,13 @@ PRODUCT_PACKAGES := \
+     libdrmframework \
+     libdrmframework_jni \
+     libfwdlockengine \
+-    VideoEditor \
++    #VideoEditor \
+     WAPPushManager
+ 
+ PRODUCT_PACKAGES += \
+-    libvideoeditor_jni \
+-    libvideoeditorplayer \
+-    libvideoeditor_core
++    #libvideoeditor_jni \
++    #libvideoeditorplayer \
++    #libvideoeditor_core
+ 
+ # Additional settings used in all AOSP builds
+ PRODUCT_PROPERTY_OVERRIDES := \
+@@ -43,10 +43,10 @@ PRODUCT_LOCALES := en_US
+ $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
+ 
+ # Get the TTS language packs
+-$(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
++$(call inherit-product-if-exists, external/svox/pico/lang/PicoLangDefaultInSystem.mk)
+ 
+ # Get a list of languages.
+-$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
++#$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
+ 
+ # Get everything else from the parent package
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
+diff --git a/target/product/full_base_telephony.mk b/target/product/full_base_telephony.mk
+index 3b44adb..485730d 100644
+--- a/target/product/full_base_telephony.mk
++++ b/target/product/full_base_telephony.mk
+@@ -20,7 +20,7 @@
+ # entirely appropriate to inherit from for on-device configurations.
+ 
+ PRODUCT_PACKAGES := \
+-    VoiceDialer
++    #VoiceDialer
+ 
+ PRODUCT_PROPERTY_OVERRIDES := \
+     keyguard.no_require_sim=true

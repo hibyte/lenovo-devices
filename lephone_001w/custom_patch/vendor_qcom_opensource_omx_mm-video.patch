@@ -1,0 +1,35 @@
+diff --git a/qdsp6/vdec/Android.mk b/qdsp6/vdec/Android.mk
+index 806786f..ccef543 100644
+--- a/qdsp6/vdec/Android.mk
++++ b/qdsp6/vdec/Android.mk
+@@ -62,7 +62,7 @@ LOCAL_MODULE_TAGS       := optional
+ LOCAL_CFLAGS            := $(libOmxVdec-def)
+ LOCAL_C_INCLUDES        := $(mm-vdec-test-inc)
+ LOCAL_PRELINK_MODULE    := false
+-LOCAL_SHARED_LIBRARIES  := libmm-omxcore libOmxVdec libbinder
++LOCAL_SHARED_LIBRARIES  := libmm-omxcore libOmxVdec libbinder liblog
+ 
+ LOCAL_SRC_FILES         := test/omx_vdec_test.cpp
+ LOCAL_SRC_FILES         += test/queue.c
+@@ -96,7 +96,7 @@ LOCAL_MODULE_TAGS               := optional
+ LOCAL_CFLAGS	  		:= $(libOmxVdec-def) -DTARGET_ARCH_8K
+ LOCAL_C_INCLUDES  		:= $(mm-vdec-test-inc)
+ LOCAL_PRELINK_MODULE    	:= false
+-LOCAL_SHARED_LIBRARIES 		:= libmm-omxcore libOmxVdec liblasic
++LOCAL_SHARED_LIBRARIES 		:= libmm-omxcore libOmxVdec liblasic liblog libcutils
+ LOCAL_SRC_FILES 		:= test/ast_omx_mm_vdec_test.cpp \
+ 				   test/ast_testutils.cpp \
+ 				   src/H264_Utils.cpp
+diff --git a/qdsp6/venc/Android.mk b/qdsp6/venc/Android.mk
+index e8b4363..6921b57 100644
+--- a/qdsp6/venc/Android.mk
++++ b/qdsp6/venc/Android.mk
+@@ -59,7 +59,7 @@ LOCAL_MODULE_TAGS := optional
+ LOCAL_CFLAGS := $(libmm-venc-def)
+ LOCAL_C_INCLUDES := $(mm-venc-test-inc)
+ LOCAL_PRELINK_MODULE := false
+-LOCAL_SHARED_LIBRARIES := libdl libOmxCore libOmxVidEnc
++LOCAL_SHARED_LIBRARIES := libdl libOmxCore libOmxVidEnc liblog
+ 
+ LOCAL_SRC_FILES	:= test/app/src/venctest_App.cpp
+ LOCAL_SRC_FILES	+= test/common/src/venctest_Config.cpp

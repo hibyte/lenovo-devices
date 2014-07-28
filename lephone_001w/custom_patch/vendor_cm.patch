@@ -1,0 +1,67 @@
+diff --git a/config/common.mk b/config/common.mk
+index 6b3e317..d6d48f5 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -51,7 +51,7 @@ PRODUCT_COPY_FILES += \
+     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
+ 
+ PRODUCT_COPY_FILES +=  \
+-    vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
++    #vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
+     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
+     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+ 
+@@ -78,7 +78,7 @@ include vendor/cm/config/themes_common.mk
+ # Required CM packages
+ PRODUCT_PACKAGES += \
+     Camera \
+-    Development \
++    #Development \
+     LatinIME \
+     SpareParts \
+     Superuser \
+@@ -87,17 +87,17 @@ PRODUCT_PACKAGES += \
+ 
+ # Optional CM packages
+ PRODUCT_PACKAGES += \
+-    VideoEditor \
+-    VoiceDialer \
++    #VideoEditor \
++    #VoiceDialer \
+     SoundRecorder \
+     Basic \
+     HoloSpiralWallpaper \
+-    MagicSmokeWallpapers \
++    #MagicSmokeWallpapers \
+     NoiseField \
+     Galaxy4 \
+-    LiveWallpapers \
++    #LiveWallpapers \
+     LiveWallpapersPicker \
+-    VisualizationWallpapers \
++    #VisualizationWallpapers \
+     PhaseBeam
+ 
+ # Custom CM packages
+@@ -106,7 +106,7 @@ PRODUCT_PACKAGES += \
+     DSPManager \
+     libcyanogen-dsp \
+     audio_effects.conf \
+-    CMWallpapers \
++    #CMWallpapers \
+     Apollo
+ 
+ # Extra tools in CM
+diff --git a/config/common_full_phone.mk b/config/common_full_phone.mk
+index 8d69ead..342b1c7 100644
+--- a/config/common_full_phone.mk
++++ b/config/common_full_phone.mk
+@@ -8,7 +8,7 @@ include frameworks/base/data/sounds/NewAudio.mk
+ include frameworks/base/data/sounds/AudioPackageNewWave.mk
+ 
+ # Bring in all video files
+-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
++#$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+ 
+ # Include CM audio files
+ include vendor/cm/config/cm_audio.mk

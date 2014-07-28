@@ -1,0 +1,17 @@
+First look at http://wiki.cyanogenmod.com/index.php?title=Compile_CyanogenMod_for_Passion to download dependencies and cyanogensource code
+
+
+
+Add this device tree to cyanogenmod sources so you get
+
+  <cyanogenrootfolder>/device/lenovo/lephone_001w/
+  <cyanogenrootfolder>/vendor/lenovo/lephone_001w/
+
+You can now start building :) 
+
+
+
+
+//commands (from <cyanogenrootfolder>)
+
+source build/envsetup.sh && brunch lephone_001w
